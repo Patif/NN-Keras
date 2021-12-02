@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Y_test = to_categorical(Y_test)
     print("Convolutional")
     convolutional = tf.keras.models.Sequential(
-        [tf.keras.layers.Conv2D(2, kernel_size=3, activation="relu", input_shape=(28, 28, 1)),
+        [tf.keras.layers.Conv2D(16, kernel_size=3, activation="relu", input_shape=(28, 28, 1)),
          tf.keras.layers.Flatten(),
          tf.keras.layers.Dense(10, activation="softmax")])
     convolutional.compile(optimizer='adam', loss='categorical_crossentropy',
